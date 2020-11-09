@@ -2,16 +2,22 @@
 $stringOne='My email address is ';
 $stringTwo='hossainnstu7@gmail.com';
 $radius=25;
-$pi=3.1416;
+$pi=3.14;
 
 //echo $stringOne.$stringTwo;
 //echo $pi*$radius**2;
 //echo $radius++;
 //echo $radius;
 $age=20;
-$age-=10;
+//$age-=10;
+//$age*=3;
 
-echo $age;
+//echo $age;
+//echo floor($pi);
+//echo ceil($pi);
+echo pi();
+
+
 ?>
 
 
