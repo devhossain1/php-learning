@@ -30,8 +30,21 @@ $ninjasTwo['imanali']='tal';
 //print_r($ninjasTwo);
 //echo count($ninjasOne);
 $ninjasThree=array_merge($ninjasOne,$ninjasTwo);
-print_r($ninjasThree);
+//print_r($ninjasThree);
+$blogs=[
+    ['title'=>'mario party','author'=>'mario','content'=>'lorem','likes'=>30],
+    ['title'=>'mario kart cheats','author'=>'toad','content'=>'lorem','likes'=>25],
+    ['title'=>'zelda hidden cheats','link','lorem',50]
+];
 
+//print_r($blogs[1][1]);
+//echo $blogs[1]['author'];
+//echo count($blogs);
+$blogs[]=['title'=>'music party','author'=>'rr martin','content'=>'lorem','likes'=>100];
+
+//print_r($blogs);
+$popped=array_pop($blogs);
+print_r($popped);
 
 ?>
 
