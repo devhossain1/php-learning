@@ -44,21 +44,61 @@ $blogs[]=['title'=>'music party','author'=>'rr martin','content'=>'lorem','likes
 
 //print_r($blogs);
 $popped=array_pop($blogs);
-print_r($popped);
+//print_r($popped);
+
+//loops:
+$ninjas=['rahim','karim','jabber'];
+//for($i=0;$i<count($ninjas);$i++){
+// echo $ninjas[$i],'<br>';
+//}
+//foreach($ninjas as $ninja){
+//    echo $ninja . '<br>';
+//}
+$products=[
+    ['name'=>'tea','price'=>10],
+    ['name'=>'coffee','price'=>20],
+    ['name'=>'drinks','price'=>60],
+    ['name'=>'soft drink','price'=>100],
+];
+//foreach($products as $product){
+// echo $product['name'] . ' - '. $product['price'] . '<br>';
+//    
+//}
+//$i=0;
+//while($i<count($products)){
+//    echo $products[$i]['name'] . '<br>';
+//    $i++;
+//}
+//
+//for($i=0;$i<count($products);$i++){
+//    echo $products[$i]['price'];
+//    echo '<br>';
+//}
+
+
+
 
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>array</title>
+    
+    <title>php tutorials series</title>
 </head>
 
 <body>
-    <h4>this is the practice</h4>
+    <h1>products</h1>
+    <ul>
+        <?php foreach($products as $product){ ?>
+         
+          <h3><?php echo $product['name']; ?></h3>
+          <p>taka <?php echo $product['price']; ?></p>
+          
+        <?php } ?>
+    </ul>
+    
 </body>
-
 </html>
