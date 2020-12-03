@@ -1,18 +1,9 @@
 <?php 
 
-//conditional statement
 
-//$price = 20;
-//
-//if ($price < 10) {
-//    echo 'The condition is met';
-//}elseif($price<20){
-//    echo 'elseif condition is met';
-//} else{
-//    echo 'the condition is not met';
-//}
 
 $products=[
+    ['name'=>'tea','price'=>65],
     ['name'=>'tea','price'=>10],
     ['name'=>'coffee','price'=>20],
     ['name'=>'drinks','price'=>60],
@@ -21,15 +12,33 @@ $products=[
 ];
 
   foreach($products as $product){
-//    if($product['price'] >20 && $product['price']<80){
-//        echo $product['name'] . '<br>';
-//    }
-    
-//     if($product['price'] >60 || $product['price']<20){
-//         echo $product['name'] . '<br>';    }
-//    
+    if($product['name'] === 'soft drink'){
+        break;
+    }
+    if($product['price'] >60){
+        continue;
+        
+    }
+      
+      echo $product['name'] . '<br>';
+         
   }
+echo '<br>';
 
+//function
+function sayHello($name='mario',$time='morning'){
+    echo "Good $time $name";
+}
+//sayHello('parvez');
+sayHello('parvez','night');
+
+function formatProduct($product){
+    //echo "{$product['name']} costs $ {$product['price']} to buy";
+    return "{$product['name']} costs $ {$product['price']} to buy";
+}
+
+//$formated = formatProduct(['name'=>'Gold Star', 'price'=>20]);
+//  echo $formated;
 
 ?>
 
@@ -43,6 +52,7 @@ $products=[
 </head>
 
 <body>
+<!--
    <ul>
        <?php foreach($products as $product){ ?>
            <?php if($product['price']>20){ ?>
@@ -52,6 +62,7 @@ $products=[
        
        <?php }?>
    </ul>
+-->
     
 </body>
 </html>
