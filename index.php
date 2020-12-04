@@ -1,44 +1,37 @@
 <?php 
 
 
-
-$products=[
-    ['name'=>'tea','price'=>65],
-    ['name'=>'tea','price'=>10],
-    ['name'=>'coffee','price'=>20],
-    ['name'=>'drinks','price'=>60],
-    ['name'=>'soft drink','price'=>80],
-    ['name'=>' cold coffee','price'=>70],
-];
-
-  foreach($products as $product){
-    if($product['name'] === 'soft drink'){
-        break;
-    }
-    if($product['price'] >60){
-        continue;
-        
-    }
-      
-      echo $product['name'] . '<br>';
-         
-  }
-echo '<br>';
-
-//function
-function sayHello($name='mario',$time='morning'){
-    echo "Good $time $name";
+//variable scope
+//local vars
+function myfunc(){
+    $price=10;
+    echo "The price is $price";
 }
-//sayHello('parvez');
-sayHello('parvez','night');
+myfunc();
+echo $price;
 
-function formatProduct($product){
-    //echo "{$product['name']} costs $ {$product['price']} to buy";
-    return "{$product['name']} costs $ {$product['price']} to buy";
+function myFuncTwo($age){
+  echo $age;  
 }
+//myFuncTwo(25);
+//echo $age;
 
-//$formated = formatProduct(['name'=>'Gold Star', 'price'=>20]);
-//  echo $formated;
+//global variables
+$name='mario';
+
+//function sayHello(){
+//   global $name;
+//    echo "Hello $name";
+//}
+//sayHello();
+
+function sayBye(&$name){
+    $name='worio';
+    echo "bye $name";
+}
+sayBye($name);
+echo "  $name";
+
 
 ?>
 
@@ -52,17 +45,7 @@ function formatProduct($product){
 </head>
 
 <body>
-<!--
-   <ul>
-       <?php foreach($products as $product){ ?>
-           <?php if($product['price']>20){ ?>
-              <li><?php echo $product['name'] . '<br>' ?></li>
-           
-           <?php } ?>
-       
-       <?php }?>
-   </ul>
--->
+
     
 </body>
 </html>
