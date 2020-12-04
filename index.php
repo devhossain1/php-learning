@@ -1,36 +1,12 @@
 <?php 
 
+//include('ninjas.php');
+//require('ninjas.php');
 
-//variable scope
-//local vars
-function myfunc(){
-    $price=10;
-    echo "The price is $price";
-}
-myfunc();
-echo $price;
+include 'ninjas.php';
+require 'ninjas.php';
+echo 'end of php';
 
-function myFuncTwo($age){
-  echo $age;  
-}
-//myFuncTwo(25);
-//echo $age;
-
-//global variables
-$name='mario';
-
-//function sayHello(){
-//   global $name;
-//    echo "Hello $name";
-//}
-//sayHello();
-
-function sayBye(&$name){
-    $name='worio';
-    echo "bye $name";
-}
-sayBye($name);
-echo "  $name";
 
 
 ?>
@@ -45,7 +21,9 @@ echo "  $name";
 </head>
 
 <body>
-
+<?php include('content.php'); ?>
+<?php include('content.php'); ?>
+<?php include('content.php'); ?>
     
 </body>
 </html>
