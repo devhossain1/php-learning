@@ -1,12 +1,5 @@
 <?php 
 
-//include('ninjas.php');
-//require('ninjas.php');
-
-include 'ninjas.php';
-require 'ninjas.php';
-echo 'end of php';
-
 
 
 ?>
@@ -14,16 +7,9 @@ echo 'end of php';
 
 <!DOCTYPE html>
 <html>
+<?php include('templates/header.php'); ?>
 
-<head>
-    
-    <title>php tutorials series</title>
-</head>
+<?php include('templates/footer.php'); ?>
 
-<body>
-<?php include('content.php'); ?>
-<?php include('content.php'); ?>
-<?php include('content.php'); ?>
-    
 </body>
 </html>
