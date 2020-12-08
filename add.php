@@ -36,7 +36,14 @@ if(empty($_POST['ingredients'])){
     }
 }
      
- };
+if(array_filter($errors)){
+//    echo 'errors in the form';
+}else{
+//    echo 'the form is valid';
+    header('location:index.php');
+}
+     
+ }
 
 
 ?>
